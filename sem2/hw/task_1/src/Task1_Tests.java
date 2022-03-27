@@ -44,4 +44,14 @@ public class Task1_Tests extends Assert {
         assertEquals(10, tail.getData().intValue());
         assertEquals(head, tail);
     }
+    @Test
+    public void pushBack_pushTwoElements_HeadAndTailIsCorrect(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(10);
+        list.pushBack(5);
+        Node<Integer> head = (Node<Integer>) list.getHead();
+        Node<Integer> tail = (Node<Integer>) list.getTail();
+        assertEquals(5, head.getData().intValue());
+        assertEquals(10, tail.getData().intValue());
+    }
 }
