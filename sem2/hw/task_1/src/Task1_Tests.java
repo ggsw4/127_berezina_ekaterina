@@ -54,4 +54,10 @@ public class Task1_Tests extends Assert {
         assertEquals(5, head.getData().intValue());
         assertEquals(10, tail.getData().intValue());
     }
+    @Test
+    public void createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyTrue(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        assertTrue(list.isEmpty());
+    }
+
 }
