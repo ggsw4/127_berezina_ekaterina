@@ -97,4 +97,15 @@ public class Task1_Tests extends Assert {
         int tail = ((Node<Integer>)list.getTail()).getData();
         assertEquals(1, tail);
     }
+    @Test
+    public void pushFront_PushFrontEmptyDoubleLinkedList_TryToGetAnother(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        try {
+            list.get(2);
+            fail();
+        } catch (IndexOutOfBoundsException e){
+            assertFalse(false);
+        }
+    }
 }
