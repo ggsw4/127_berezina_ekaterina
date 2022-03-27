@@ -1,0 +1,3 @@
+#DoubleLinkedList
+
+DoubleLinkedList|33|--size -> ++size|pushBack_pushToEmptyList_sizeEqualsOne
