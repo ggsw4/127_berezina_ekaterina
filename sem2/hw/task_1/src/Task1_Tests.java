@@ -17,4 +17,15 @@ public class Task1_Tests extends Assert {
         assertEquals(10, tail.getData().intValue());
         assertEquals(head, tail);
     }
+    @Test
+    public void pushFront_pushTwoElements_HeadAndTailIsCorrect(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+
+        list.pushFront(20);
+        list.pushFront(10);
+        Node<Integer> head = (Node<Integer>) list.getHead();
+        Node<Integer> tail = (Node<Integer>) list.getTail();
+        assertEquals(20, head.getData().intValue());
+        assertEquals(10, tail.getData().intValue());
+    }
 }
