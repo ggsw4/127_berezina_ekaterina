@@ -2,3 +2,4 @@
 
 DoubleLinkedList|33|--size -> ++size|pushBack_pushToEmptyList_sizeEqualsOne
 DoubleLinkedList|11|return dummy == dummy -> return size == 0|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
+DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_CreateTwoListsAndUnite_CheckSize
