@@ -139,4 +139,14 @@ public class Task1_Tests extends Assert {
         num1 = ((Node<Integer>)list.get(3)).getData();
         assertEquals(4, num1);
     }
+    @Test
+    public void remove_RemoveElement_CheckValue(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        list.remove(list.get(0));
+        int num = ((Node<Integer>)list.get(0)).getData();
+        assertEquals(2, num);
+    }
 }
