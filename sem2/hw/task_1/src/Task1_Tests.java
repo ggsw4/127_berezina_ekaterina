@@ -208,4 +208,17 @@ public class Task1_Tests extends Assert {
         num1 = ((Node<Integer>)list.get(5)).getData();
         assertEquals(6, num1);
     }
+    @Test
+    public void insertListBefore_TryToInsertListBefore_CheckSize(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(4);
+        list.pushFront(5);
+        list.pushFront(6);
+        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
+        list1.pushFront(1);
+        list1.pushFront(2);
+        list1.pushFront(3);
+        list.insertListBefore(list.get(0), list1);
+        assertEquals(6, list.getSize());
+    }
 }
