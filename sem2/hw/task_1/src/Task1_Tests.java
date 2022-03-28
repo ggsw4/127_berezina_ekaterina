@@ -149,4 +149,30 @@ public class Task1_Tests extends Assert {
         int num = ((Node<Integer>)list.get(0)).getData();
         assertEquals(2, num);
     }
+    @Test
+    public void insertListAfter_CreateTwoListsAndUnite_CheckValues(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(5);
+        list.pushFront(6);
+
+        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
+        list1.pushFront(2);
+        list1.pushFront(3);
+        list1.pushFront(4);
+        list.insertListAfter(list.get(0), list1);
+
+        int num1 = ((Node<Integer>)list.get(0)).getData();
+        assertEquals(1, num1);
+        num1 = ((Node<Integer>)list.get(1)).getData();
+        assertEquals(2, num1);
+        num1 = ((Node<Integer>)list.get(2)).getData();
+        assertEquals(3, num1);
+        num1 = ((Node<Integer>)list.get(3)).getData();
+        assertEquals(4, num1);
+        num1 = ((Node<Integer>)list.get(4)).getData();
+        assertEquals(5, num1);
+        num1 = ((Node<Integer>)list.get(5)).getData();
+        assertEquals(6, num1);
+    }
 }
