@@ -29,6 +29,15 @@ public class Task1_Tests extends Assert {
         assertEquals(10, tail.getData().intValue());
     }
     @Test
+    public void pushFront_PushFrontThreeItems_HeadIsCorrect() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        Node<Integer> head = (Node<Integer>) list.getHead();
+        assertEquals(1, head.getData().intValue());
+    }
+    @Test
     public void pushBack_pushToEmptyList_sizeEqualsOne () {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.pushBack(10);
