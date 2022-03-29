@@ -7,3 +7,5 @@ DoubleLinkedList|48|node.getNext().setNext(node.getPrev()) -> node.getNext().set
 
 Node|13|this.next = prev -> this.next = next|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node|14|this.prev = next -> this.prev = prev|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
+
+DynamicArray|11|size = 1 -> size = DefaultSize|createArray_CreateEmptyArray_CheckSize
