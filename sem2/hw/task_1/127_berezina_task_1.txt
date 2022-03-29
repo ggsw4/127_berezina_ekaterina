@@ -14,3 +14,4 @@ DynamicArray|27|newSize = size -> size = newSize|resize_CreateArrayAndResize_Che
 DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|get_GetIndexOutOfBounds2_CheckException
 DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|set_SetIndexOutOfBounds2_CheckException
 DynamicArray|40|if(index < 0 || index > size) -> if(index < 0 || index >= size)|insert_InsertIndexOutOfBounds2_CheckException
+DynamicArray|15|data = new Object[capacity] -> data = new Object[size]|set_SetNumbers_CheckValues
