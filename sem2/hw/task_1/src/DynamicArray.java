@@ -49,11 +49,11 @@ public class DynamicArray<T> {
         data[index] = value;
     }
     public void pushBack(T value) {
-        if(capacity < size) {
+        if(capacity <= size) {
             data = Arrays.copyOf(data, size * 2);
             capacity = size * 2;
         }
-        data[capacity] = value;
+        data[size] = value;
         ++size;
     }
     public void popBack() {
