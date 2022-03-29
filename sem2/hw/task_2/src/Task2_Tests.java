@@ -48,4 +48,11 @@ public class Task2_Tests extends Assert {
         sorter.sort(myArray, new SomeComparator());
         assertArrayEquals(new Integer[]{1, 2, 3}, myArray);
     }
+    @Test
+    public void insertionSort_CreateInsertionSort_SortDifferentNumbers(){
+        InsertionSort<Integer> sorter = new InsertionSort<>();
+        Integer[] myArray = {1, 4, 2, 7};
+        sorter.sort(myArray, new SomeComparator());
+        assertArrayEquals(new Integer[]{1, 2, 4, 7}, myArray);
+    }
 }
