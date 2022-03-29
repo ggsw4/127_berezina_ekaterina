@@ -32,4 +32,11 @@ public class Task2_Tests extends Assert {
         sorter.sort(myArray, new SomeComparator());
         assertArrayEquals(new Integer[]{1, 2, 3, 6, 8}, myArray);
     }
+    @Test
+    public void bubbleSort_CreateBubbleSort_CompareSameArrays(){
+        BubbleSort<Integer> sorter = new BubbleSort<>();
+        Integer[] myArray = {1, 2, 3};
+        sorter.sort(myArray, new SomeComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3}, myArray);
+    }
 }
