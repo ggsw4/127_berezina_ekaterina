@@ -9,7 +9,7 @@ public class QuickSort<T> implements Sort<T> {
     private void qSortRec(T[] data, int b, int e) {
         if(b >= e)
             return;
-        int base = split(data, e, b);
+        int base = split(data, b, e);
         qSortRec(data, b, base - 2);
         qSortRec(data, base + 2, e);
     }
