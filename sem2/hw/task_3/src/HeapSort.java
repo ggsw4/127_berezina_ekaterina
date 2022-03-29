@@ -7,7 +7,7 @@ public class HeapSort<T> implements Sort<T> {
         this.comparator = comparator;
         heapify();
         for(int sortedSize = 0; sortedSize < data.length - 1; ++sortedSize) {
-            swap(0, data.length - sortedSize);
+            swap(0, data.length - sortedSize - 1);
             siftDown(0, 1, 2, data.length - sortedSize - 1);
         }
     }
