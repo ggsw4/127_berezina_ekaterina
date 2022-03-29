@@ -1,0 +1,1 @@
+HeapSort|10|swap(0, data.length - sortedSize); -> swap(0, data.length - sortedSize - 1);|heapSort_CreateNewHeapSort_CompareTwoItemsArrays
