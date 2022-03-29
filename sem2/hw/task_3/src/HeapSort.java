@@ -14,7 +14,7 @@ public class HeapSort<T> implements Sort<T> {
 
     private void heapify(){
         int start = (data.length - 2) / 2;
-        for (int i = start; i >= 1; --i)
+        for (int i = start; i >= 0; --i)
             siftDown(i, 2 * i, 2 * i + 1, data.length);
     }
 
