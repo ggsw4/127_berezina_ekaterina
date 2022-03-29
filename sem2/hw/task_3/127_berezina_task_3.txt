@@ -1,2 +1,3 @@
 HeapSort|10|swap(0, data.length - sortedSize); -> swap(0, data.length - sortedSize - 1);|heapSort_CreateNewHeapSort_CompareTwoItemsArrays
 HeapSort|17|for (int i = start; i >= 1; --i) -> for (int i = start; i >= 0; --i)|heapSort_CreateNewHeapSort_CompareTwoItemsArrays
+HeapSort|38|siftDown(right, 2 * right + 1, 2 * right + 2, data.length); -> siftDown(right, 2 * right + 1, 2 * right + 2, size);|heapSort_CreateNewHeapSort_SortArray
