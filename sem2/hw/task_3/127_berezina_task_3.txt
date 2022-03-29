@@ -7,3 +7,4 @@ MergeSort|35|else if (comparator.compare(from[firstFocus], from[secondFocus]) > 
 MergeSort|19|merge(buffer, sorting, begin, middle - begin, end - middle); -> merge(buffer, sorting, begin, middle - begin + 1, end - middle);|mergeSort_CreateNewMergeSort_SortTwoElements
 MergeSort|17|mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffer, sorting, begin, middle);|mergeSort_CreateNewMergeSort_SortThreeElements
 MergeSort|34|to[resPos++] = from[firstFocus]; -> to[resPos++] = from[firstFocus++];|mergeSort_CreateNewMergeSort_SortThreeElements2
+MergeSort|18|mergeSortRec(sorting, buffer, middle + 1, end); -> mergeSortRec(buffer, sorting, middle + 1, end);|mergeSort_CreateNewMergeSort_SortArray
