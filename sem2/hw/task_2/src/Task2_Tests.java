@@ -24,4 +24,12 @@ public class Task2_Tests extends Assert {
             return first - second;
         }
     }
+
+    @Test
+    public void bubbleSort_CreateBubbleSort_SortArrayWithDifferentNumbers(){
+        BubbleSort<Integer> sorter = new BubbleSort<>();
+        Integer[] myArray = {3, 1, 2, 6, 8};
+        sorter.sort(myArray, new SomeComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3, 6, 8}, myArray);
+    }
 }
