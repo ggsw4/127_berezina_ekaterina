@@ -8,6 +8,14 @@ public class Task1_Tests extends Assert {
         assertEquals(1, list.getSize());
     }
     @Test
+    public void pushFront_pushToEmptyList_getSize () {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(10);
+        list.pushFront(20);
+        list.pushFront(30);
+        assertEquals(3, list.getSize());
+    }
+    @Test
     public void pushFront_pushToEmptyList_HeadAndTailIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.pushFront(10);
@@ -62,6 +70,15 @@ public class Task1_Tests extends Assert {
         Node<Integer> tail = (Node<Integer>) list.getTail();
         assertEquals(5, head.getData().intValue());
         assertEquals(10, tail.getData().intValue());
+    }
+    @Test
+    public void pushBack_PushBackThreeElements_HeadIsCorrect() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(1);
+        list.pushBack(2);
+        list.pushBack(3);
+        Node<Integer> head = (Node<Integer>) list.getHead();
+        assertEquals(3, head.getData().intValue());
     }
     @Test
     public void createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyTrue(){
@@ -169,18 +186,18 @@ public class Task1_Tests extends Assert {
         list1.pushFront(2);
         list1.pushFront(3);
         list1.pushFront(4);
-        list.insertListAfter(list.get(0), list1);
+        list.insertListAfter(list.get(1), list1);
 
         int num1 = ((Node<Integer>)list.get(0)).getData();
         assertEquals(1, num1);
         num1 = ((Node<Integer>)list.get(1)).getData();
-        assertEquals(2, num1);
-        num1 = ((Node<Integer>)list.get(2)).getData();
-        assertEquals(3, num1);
-        num1 = ((Node<Integer>)list.get(3)).getData();
-        assertEquals(4, num1);
-        num1 = ((Node<Integer>)list.get(4)).getData();
         assertEquals(5, num1);
+        num1 = ((Node<Integer>)list.get(2)).getData();
+        assertEquals(2, num1);
+        num1 = ((Node<Integer>)list.get(3)).getData();
+        assertEquals(3, num1);
+        num1 = ((Node<Integer>)list.get(4)).getData();
+        assertEquals(4, num1);
         num1 = ((Node<Integer>)list.get(5)).getData();
         assertEquals(6, num1);
     }
