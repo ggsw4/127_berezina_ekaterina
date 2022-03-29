@@ -35,7 +35,7 @@ public class HeapSort<T> implements Sort<T> {
             return;
         }
         swap(right, parent);
-        siftDown(right, 2 * right + 1, 2 * right + 2, data.length);
+        siftDown(right, 2 * right + 1, 2 * right + 2, size);
     }
     private void swap(int i1, int i2) {
         T tmp = data[i1];
