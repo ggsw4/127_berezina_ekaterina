@@ -60,7 +60,14 @@ public class Task2_Tests extends Assert {
     @Test
     public void selectionSort_CreateSelectionSort_CompareSameArrays(){
         SelectionSort<Integer> sorter = new SelectionSort<>();
-        Integer[] myArray = {1, 2, 3, 4, 5};
+        Integer[] myArray = {1, 2, 3};
+        sorter.sort(myArray, new SomeComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3}, myArray);
+    }
+    @Test
+    public void selectionSort_CreateSelectionSort_SortArray(){
+        SelectionSort<Integer> sorter = new SelectionSort<>();
+        Integer[] myArray = {1, 4, 5, 2, 3};
         sorter.sort(myArray, new SomeComparator());
         assertArrayEquals(new Integer[]{1, 2, 3, 4, 5}, myArray);
     }
