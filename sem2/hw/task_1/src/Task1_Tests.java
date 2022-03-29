@@ -445,4 +445,10 @@ public class Task1_Tests extends Assert {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
+    @Test
+    public void remove_RemoveNumber_CheckSize(){
+        DynamicArray<Integer> array = new DynamicArray<>(10);
+        array.remove(6);
+        assertEquals(9, array.getSize());
+    }
 }
