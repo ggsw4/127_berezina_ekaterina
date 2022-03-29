@@ -9,3 +9,5 @@ MergeSort|17|mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffe
 MergeSort|34|to[resPos++] = from[firstFocus]; -> to[resPos++] = from[firstFocus++];|mergeSort_CreateNewMergeSort_SortThreeElements2
 MergeSort|18|mergeSortRec(sorting, buffer, middle + 1, end); -> mergeSortRec(buffer, sorting, middle + 1, end);|mergeSort_CreateNewMergeSort_SortArray
 MergeSort|32|to[resPos] = from[secondFocus++]; -> to[resPos++] = from[secondFocus++];|mergeSort_CreateNewMergeSort_SortArray
+
+QuickSort|12|int base = split(data, e, b); -> int base = split(data, b, e);|quickSort_CreateNewQuickSort_SortTwoElements
