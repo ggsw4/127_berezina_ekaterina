@@ -421,4 +421,16 @@ public class Task1_Tests extends Assert {
             assertEquals("Array is empty", some.getMessage());
         }
     }
+
+    @Test
+    public void remove_RemoveOutOfBounds_CheckException(){
+        DynamicArray<Integer> array = new DynamicArray<>(10);
+        try {
+            array.remove(11);
+            fail();
+        }
+        catch (Exception some) {
+            assertEquals("Index out of bounds", some.getMessage());
+        }
+    }
 }
