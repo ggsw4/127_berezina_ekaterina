@@ -19,3 +19,5 @@ DynamicArray|42|if(capacity < size) { -> if(capacity <= size) {|insert_InsertNum
 DynamicArray|49|data[size] = value -> data[index] = value;|insert_InsertNumber_CheckNewValue
 DynamicArray|52|if(capacity < size) -> if(capacity <= size)|pushBack_PushBackNumbers_CheckValues
 DynamicArray|56|data[capacity] = value; -> data[size] = value;|pushBack_PushBackNumbers_CheckValues
+DynamicArray|60|if(size < 0) -> if(size <= 0)|popBack_PopBackInEmptyArray_CheckException
+DynamicArray|66|if(index < 0 || index > size) -> if(index < 0 || index >= size)|remove_RemoveOutOfBounds2_CheckException
