@@ -31,7 +31,7 @@ public class MergeSort<T> implements Sort<T> {
             if(firstFocus == firstEnd)
                 to[resPos] = from[secondFocus++];
             else if(secondFocus == secondEnd)
-                to[resPos++] = from[firstFocus];
+                to[resPos++] = from[firstFocus++];
             else if (comparator.compare(from[firstFocus], from[secondFocus]) < 0)
                 to[resPos++] = from[firstFocus++];
             else
