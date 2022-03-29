@@ -39,14 +39,14 @@ public class DynamicArray<T> {
     public void insert(int index, T value) {
         if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Index out of bounds");
-        if(capacity < size) {
+        if(capacity <= size) {
             data = Arrays.copyOf(data, size * 2);
             capacity = size * 2;
         }
         for(int i = size - 1; i >= index; --i)
             data[i + 1] = data[i];
         ++size;
-        data[size] = value;
+        data[index] = value;
     }
     public void pushBack(T value) {
         if(capacity < size) {
