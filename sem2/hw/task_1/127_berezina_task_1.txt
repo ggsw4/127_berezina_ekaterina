@@ -2,6 +2,8 @@ DoubleLinkedList|33|--size -> ++size|pushBack_pushToEmptyList_sizeEqualsOne
 DoubleLinkedList|11|return dummy == dummy -> return size == 0|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
 DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_CreateTwoListsAndUnite_CheckSize
 DoubleLinkedList|74| -> size += list.getSize()|insertListBefore_TryToInsertListBefore_CheckSize
+DoubleLinkedList|47|node.getPrev().setPrev(node.getNext()) -> node.getPrev().setNext(node.getNext())|remove_RemoveElement_CheckValue
+DoubleLinkedList|48|node.getNext().setNext(node.getPrev()) -> node.getNext().setPrev(node.getPrev())|remove_RemoveElement_CheckValue
 
 Node|13|this.next = prev -> this.next = next|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node|14|this.prev = next -> this.prev = prev|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
