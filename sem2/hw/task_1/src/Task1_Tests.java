@@ -261,20 +261,35 @@ public class Task1_Tests extends Assert {
     }
 
 
+
     @Test
     public void createArray_SetSizeNewArray_CheckSize() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         assertEquals(10, array.getSize());
     }
+
     @Test
     public void createArray_CreateEmptyArray_CheckSize(){
         DynamicArray<Integer> array = new DynamicArray<>();
         assertEquals(1024, array.getSize());
     }
+
     @Test
     public void resize_CreateArrayAndResize_CheckSize(){
         DynamicArray<Integer> array = new DynamicArray<>(10);
         array.resize(15);
         assertEquals(15, array.getSize());
+    }
+
+    @Test
+    public void get_GetIndexOutOfBounds_CheckException(){
+        DynamicArray<Integer> array = new DynamicArray<>(10);
+        try {
+            array.get(15);
+            fail();
+        }
+        catch (IndexOutOfBoundsException some) {
+            assertEquals("Index out of bounds", some.getMessage());
+        }
     }
 }
