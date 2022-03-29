@@ -1,0 +1,1 @@
+BubbleSort|5|for(int i = 0; i < data.length - sps; ++i) -> for(int i = 1; i < data.length - sps; ++i)|bubbleSort_CreateBubbleSort_TryToSort
