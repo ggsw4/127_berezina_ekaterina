@@ -12,3 +12,4 @@ DynamicArray|11|size = 1 -> size = DefaultSize|createArray_CreateEmptyArray_Chec
 DynamicArray|21|if(newSize > 0) -> if(newSize < 0)|resize_CreateArrayAndResize_CheckSize
 DynamicArray|27|newSize = size -> size = newSize|resize_CreateArrayAndResize_CheckSize
 DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|get_GetIndexOutOfBounds2_CheckException
+DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|set_SetIndexOutOfBounds2_CheckException
