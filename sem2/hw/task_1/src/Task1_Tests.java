@@ -402,4 +402,11 @@ public class Task1_Tests extends Assert {
         assertEquals(4, array.get(3).intValue());
         assertEquals(5, array.get(4).intValue());
     }
+
+    @Test
+    public void popBack_PopBack_CheckSize(){
+        DynamicArray<Integer> array = new DynamicArray<>(10);
+        array.popBack();
+        assertEquals(9, array.getSize());
+    }
 }
