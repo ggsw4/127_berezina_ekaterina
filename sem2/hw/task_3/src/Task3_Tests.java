@@ -41,4 +41,33 @@ public class Task3_Tests extends Assert {
         sorter.sort(array, comparator);
         assertArrayEquals(new Integer[]{1, 2, 6, 7, 9, 13, 15}, array);
     }
+    @Test
+    public void heapSort_CreateNewHeapSort_SortArray2(){
+        HeapSort<Integer> sorter = new HeapSort<>();
+        Integer[] array = {1, 3, 2, 5, 10, 4, 6};
+        MyComparator<Integer> comparator = new MyComparator<Integer>() {
+            @Override
+            public int compare(Integer first, Integer second) {
+                return first - second;
+            }
+        };
+        sorter.sort(array, comparator);
+        assertArrayEquals(new Integer[]{1, 2, 3, 4, 5, 6, 10}, array);
+    }
+
+
+    @Test
+    public void mergeSort_CreateNewMergeSort_CompareArrays(){
+        MergeSort<Integer> sorter = new MergeSort<>();
+        Integer[] array = {1};
+        MyComparator<Integer> comparator = new MyComparator<Integer>() {
+            @Override
+            public int compare(Integer first, Integer second) {
+                return first - second;
+            }
+        };
+        sorter.sort(array, comparator);
+        assertArrayEquals(new Integer[]{1}, array);
+    }
+
 }
