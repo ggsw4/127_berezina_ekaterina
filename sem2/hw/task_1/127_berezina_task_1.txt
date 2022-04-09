@@ -19,3 +19,4 @@ DynamicArray.java|60|if(size < 0) -> if(size <= 0)|popBack_PopBackInEmptyArray_C
 DynamicArray.java|66|if(index < 0 || index > size) -> if(index < 0 || index >= size)|remove_RemoveOutOfBounds2_CheckException
 
 DoubleLinkedList.java|17|return dummy.getPrev(); -> return dummy.getNext();|getHead_getHeadOfTwoElements_HeadIsCorrect
+DoubleLinkedList.java|20|return dummy.getNext(); -> return dummy.getPrev();|getTail_getTailOfTwoElements_TailIsCorrect
