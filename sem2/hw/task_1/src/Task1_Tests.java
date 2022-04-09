@@ -205,18 +205,18 @@ public class Task1_Tests extends Assert {
         list1.pushFront(2);
         list1.pushFront(3);
         list1.pushFront(4);
-        list.insertListAfter(list.get(1), list1);
+        list.insertListAfter(list.get(0), list1);
 
         int num1 = ((Node<Integer>) list.get(0)).getData();
         assertEquals(1, num1);
         num1 = ((Node<Integer>) list.get(1)).getData();
-        assertEquals(5, num1);
-        num1 = ((Node<Integer>) list.get(2)).getData();
         assertEquals(2, num1);
-        num1 = ((Node<Integer>) list.get(3)).getData();
+        num1 = ((Node<Integer>) list.get(2)).getData();
         assertEquals(3, num1);
-        num1 = ((Node<Integer>) list.get(4)).getData();
+        num1 = ((Node<Integer>) list.get(3)).getData();
         assertEquals(4, num1);
+        num1 = ((Node<Integer>) list.get(4)).getData();
+        assertEquals(5, num1);
         num1 = ((Node<Integer>) list.get(5)).getData();
         assertEquals(6, num1);
     }
@@ -261,7 +261,6 @@ public class Task1_Tests extends Assert {
     }
 
 
-
     @Test
     public void createArray_SetSizeNewArray_CheckSize() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
@@ -269,86 +268,80 @@ public class Task1_Tests extends Assert {
     }
 
     @Test
-    public void createArray_CreateEmptyArray_CheckSize(){
+    public void createArray_CreateEmptyArray_CheckSize() {
         DynamicArray<Integer> array = new DynamicArray<>();
         assertEquals(1024, array.getSize());
     }
 
     @Test
-    public void resize_CreateArrayAndResize_CheckSize(){
+    public void resize_CreateArrayAndResize_CheckSize() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         array.resize(15);
         assertEquals(15, array.getSize());
     }
 
     @Test
-    public void get_GetIndexOutOfBounds_CheckException(){
+    public void get_GetIndexOutOfBounds_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
             array.get(15);
             fail();
-        }
-        catch (IndexOutOfBoundsException some) {
+        } catch (IndexOutOfBoundsException some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
 
     @Test
-    public void get_GetIndexOutOfBounds2_CheckException(){
+    public void get_GetIndexOutOfBounds2_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
             array.get(10);
             fail();
-        }
-        catch (IndexOutOfBoundsException some) {
+        } catch (IndexOutOfBoundsException some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
 
     @Test
-    public void set_SetIndexOutOfBounds_CheckException(){
+    public void set_SetIndexOutOfBounds_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
-            array.set(11,15);
+            array.set(11, 15);
             fail();
-        }
-        catch (IndexOutOfBoundsException some) {
+        } catch (IndexOutOfBoundsException some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
 
     @Test
-    public void set_SetIndexOutOfBounds2_CheckException(){
+    public void set_SetIndexOutOfBounds2_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
-            array.set(10,15);
+            array.set(10, 15);
             fail();
-        }
-        catch (IndexOutOfBoundsException some) {
+        } catch (IndexOutOfBoundsException some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
 
     @Test
-    public void insert_InsertValueOutOfBounds_CheckException(){
+    public void insert_InsertValueOutOfBounds_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
-            array.insert(11,15);
+            array.insert(11, 15);
             fail();
-        }
-        catch (IndexOutOfBoundsException some) {
+        } catch (IndexOutOfBoundsException some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
 
     @Test
-    public void insert_InsertValueOutOfBounds2_CheckException(){
+    public void insert_InsertValueOutOfBounds2_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
-            array.insert(10,15);
+            array.insert(10, 15);
             fail();
-        }
-        catch (IndexOutOfBoundsException some) {
+        } catch (IndexOutOfBoundsException some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
@@ -370,7 +363,7 @@ public class Task1_Tests extends Assert {
     }
 
     @Test
-    public void pushBack_PushBackNumbers_CheckValues(){
+    public void pushBack_PushBackNumbers_CheckValues() {
         DynamicArray<Integer> array = new DynamicArray<>(5);
         array.set(0, 1);
         array.set(1, 2);
@@ -404,51 +397,55 @@ public class Task1_Tests extends Assert {
     }
 
     @Test
-    public void popBack_PopBack_CheckSize(){
+    public void popBack_PopBack_CheckSize() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         array.popBack();
         assertEquals(9, array.getSize());
     }
 
     @Test
-    public void popBack_PopBackInEmptyArray_CheckException(){
+    public void popBack_PopBackInEmptyArray_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(0);
         try {
             array.popBack();
             fail();
-        }
-        catch (Exception some) {
+        } catch (Exception some) {
             assertEquals("Array is empty", some.getMessage());
         }
     }
 
     @Test
-    public void remove_RemoveOutOfBounds_CheckException(){
+    public void remove_RemoveOutOfBounds_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
             array.remove(11);
             fail();
-        }
-        catch (Exception some) {
+        } catch (Exception some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
 
     @Test
-    public void remove_RemoveOutOfBounds2_CheckException(){
+    public void remove_RemoveOutOfBounds2_CheckException() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         try {
             array.remove(10);
             fail();
-        }
-        catch (Exception some) {
+        } catch (Exception some) {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
     @Test
-    public void remove_RemoveNumber_CheckSize(){
+    public void remove_RemoveNumber_CheckSize() {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         array.remove(6);
         assertEquals(9, array.getSize());
+    }
+    @Test
+    public void getHead_getHeadOfTwoElements_HeadIsCorrect() {
+        var list = new DoubleLinkedList<>();
+        list.insertBefore(list.getHead(), 0);
+        var node = list.insertBefore(list.getHead(), 0);
+        assertEquals(node, list.getHead());
     }
 }
