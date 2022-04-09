@@ -52,8 +52,8 @@ public class DoubleLinkedList<T> {
     public void insertListAfter(ListNode<T> node, DoubleLinkedList<T> list) {
         if(list.isEmpty())
             return;
-        list.getHead().setNext(node);
-        list.getTail().setPrev(node.getNext());
+        list.getHead().setPrev(node);
+        list.getTail().setNext(node.getNext());
         node.getNext().setPrev(list.getTail());
         node.setNext(list.getHead());
         size += list.getSize();
