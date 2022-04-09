@@ -24,3 +24,5 @@ DoubleLinkedList.java|41|return insertBefore(getTail(), data); -> return insertA
 DoubleLinkedList.java|44|return insertAfter(getHead(), data); -> return insertBefore(getHead(), data);|pushBack_pushTwoElements_HeadAndTailIsCorrect
 DoubleLinkedList.java|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 DoubleLinkedList.java|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveElement_CheckValue
+DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveElement_CheckValue2
+DoubleLinkedList.java|59| -> size += list.getSize();|insertListAfter_CreateTwoListsAndUnite_CheckSize
