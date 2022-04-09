@@ -22,3 +22,4 @@ DoubleLinkedList.java|17|return dummy.getPrev(); -> return dummy.getNext();|getH
 DoubleLinkedList.java|20|return dummy.getNext(); -> return dummy.getPrev();|getTail_getTailOfTwoElements_TailIsCorrect
 DoubleLinkedList.java|41|return insertBefore(getTail(), data); -> return insertAfter(getTail(), data);|pushFront_pushTwoElements_HeadAndTailIsCorrect
 DoubleLinkedList.java|44|return insertAfter(getHead(), data); -> return insertBefore(getHead(), data);|pushBack_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
