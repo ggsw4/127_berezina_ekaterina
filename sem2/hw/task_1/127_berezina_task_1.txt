@@ -1,5 +1,18 @@
 DoubleLinkedList.java|33|--size; -> ++size;|pushBack_pushToEmptyList_sizeEqualsOne
 DoubleLinkedList.java|11|return dummy == dummy; -> return size == 0;|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
+DoubleLinkedList.java|17|return dummy.getPrev(); -> return dummy.getNext();|getHead_getHeadOfTwoElements_HeadIsCorrect
+DoubleLinkedList.java|20|return dummy.getNext(); -> return dummy.getPrev();|getTail_getTailOfTwoElements_TailIsCorrect
+DoubleLinkedList.java|41|return insertBefore(getTail(), data); -> return insertAfter(getTail(), data);|pushFront_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|44|return insertAfter(getHead(), data); -> return insertBefore(getHead(), data);|pushBack_pushTwoElements_HeadAndTailIsCorrect
+DoubleLinkedList.java|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
+DoubleLinkedList.java|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveElement_CheckValue
+DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveElement_CheckValue2
+DoubleLinkedList.java|59| -> size += list.getSize();|insertListAfter_CreateTwoListsAndUnite_CheckSize
+DoubleLinkedList.java|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_CreateTwoListsAndUnite_CheckValues
+DoubleLinkedList.java|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_CreateTwoListsAndUnite_CheckValues
+DoubleLinkedList.java|70| -> size += list.getSize();|insertListBefore_TryToInsertListBefore_CheckSize
+DoubleLinkedList.java|66|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|insertListBefore_TryToInsertListBefore_CheckValues
+DoubleLinkedList.java|67|list.getTail().setPrev(node); -> list.getTail().setNext(node);|insertListBefore_TryToInsertListBefore_CheckValues
 
 Node.java|13|this.next = prev; -> this.next = next;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node.java|14|this.prev = next; -> this.prev = prev;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
@@ -18,16 +31,3 @@ DynamicArray.java|56|data[capacity] = value; -> data[size] = value;|pushBack_Pus
 DynamicArray.java|60|if(size < 0) -> if(size <= 0)|popBack_PopBackInEmptyArray_CheckException
 DynamicArray.java|66|if(index < 0 || index > size) -> if(index < 0 || index >= size)|remove_RemoveOutOfBounds2_CheckException
 
-DoubleLinkedList.java|17|return dummy.getPrev(); -> return dummy.getNext();|getHead_getHeadOfTwoElements_HeadIsCorrect
-DoubleLinkedList.java|20|return dummy.getNext(); -> return dummy.getPrev();|getTail_getTailOfTwoElements_TailIsCorrect
-DoubleLinkedList.java|41|return insertBefore(getTail(), data); -> return insertAfter(getTail(), data);|pushFront_pushTwoElements_HeadAndTailIsCorrect
-DoubleLinkedList.java|44|return insertAfter(getHead(), data); -> return insertBefore(getHead(), data);|pushBack_pushTwoElements_HeadAndTailIsCorrect
-DoubleLinkedList.java|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
-DoubleLinkedList.java|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveElement_CheckValue
-DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveElement_CheckValue2
-DoubleLinkedList.java|59| -> size += list.getSize();|insertListAfter_CreateTwoListsAndUnite_CheckSize
-DoubleLinkedList.java|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_CreateTwoListsAndUnite_CheckValues
-DoubleLinkedList.java|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_CreateTwoListsAndUnite_CheckValues
-DoubleLinkedList.java|70| -> size += list.getSize();|insertListBefore_TryToInsertListBefore_CheckSize
-DoubleLinkedList.java|66|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|insertListBefore_TryToInsertListBefore_CheckValues
-DoubleLinkedList.java|67|list.getTail().setPrev(node); -> list.getTail().setNext(node);|insertListBefore_TryToInsertListBefore_CheckValues

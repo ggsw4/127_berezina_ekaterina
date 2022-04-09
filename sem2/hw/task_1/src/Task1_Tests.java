@@ -101,6 +101,20 @@ public class Task1_Tests extends Assert {
         list.pushBack(1);
         assertFalse(list.isEmpty());
     }
+    @Test
+    public void getHead_getHeadOfTwoElements_HeadIsCorrect() {
+        var list = new DoubleLinkedList<>();
+        list.insertBefore(list.getHead(), 0);
+        var node = list.insertBefore(list.getHead(), 0);
+        assertEquals(node, list.getHead());
+    }
+    @Test
+    public void getTail_getTailOfTwoElements_TailIsCorrect() {
+        var list = new DoubleLinkedList<>();
+        list.insertBefore(list.getTail(), 0);
+        var node = list.insertAfter(list.getTail(), 0);
+        assertEquals(node, list.getTail());
+    }
 
     @Test
     public void getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead() {
@@ -450,19 +464,5 @@ public class Task1_Tests extends Assert {
         DynamicArray<Integer> array = new DynamicArray<>(10);
         array.remove(6);
         assertEquals(9, array.getSize());
-    }
-    @Test
-    public void getHead_getHeadOfTwoElements_HeadIsCorrect() {
-        var list = new DoubleLinkedList<>();
-        list.insertBefore(list.getHead(), 0);
-        var node = list.insertBefore(list.getHead(), 0);
-        assertEquals(node, list.getHead());
-    }
-    @Test
-    public void getTail_getTailOfTwoElements_TailIsCorrect() {
-        var list = new DoubleLinkedList<>();
-        list.insertBefore(list.getTail(), 0);
-        var node = list.insertAfter(list.getTail(), 0);
-        assertEquals(node, list.getTail());
     }
 }
