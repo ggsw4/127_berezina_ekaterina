@@ -193,6 +193,16 @@ public class Task1_Tests extends Assert {
         int num = ((Node<Integer>) list.get(0)).getData();
         assertEquals(20, num);
     }
+    @Test
+    public void remove_RemoveElement_CheckValue2() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(10);
+        list.pushFront(20);
+        list.pushFront(30);
+        list.remove(list.get(0));
+        int num = ((Node<Integer>) list.get(1)).getData();
+        assertEquals(30, num);
+    }
 
     @Test
     public void insertListAfter_CreateTwoListsAndUnite_CheckValues() {
