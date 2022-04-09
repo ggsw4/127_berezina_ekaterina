@@ -28,3 +28,4 @@ DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev()); -> node.getNext
 DoubleLinkedList.java|59| -> size += list.getSize();|insertListAfter_CreateTwoListsAndUnite_CheckSize
 DoubleLinkedList.java|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_CreateTwoListsAndUnite_CheckValues
 DoubleLinkedList.java|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_CreateTwoListsAndUnite_CheckValues
+DoubleLinkedList.java|70| -> size += list.getSize();|insertListBefore_TryToInsertListBefore_CheckSize
