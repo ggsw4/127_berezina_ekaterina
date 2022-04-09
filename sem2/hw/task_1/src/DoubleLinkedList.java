@@ -14,7 +14,7 @@ public class DoubleLinkedList<T> {
         return size;
     }
     public ListNode<T> getHead() {
-        return dummy.getPrev();
+        return dummy.getNext();
     }
     public ListNode<T> getTail() {
         return dummy.getNext();
@@ -44,8 +44,8 @@ public class DoubleLinkedList<T> {
         return insertAfter(getHead(), data);
     }
     public void remove(ListNode<T> node) {
-        node.getPrev().setNext(node.getNext());
-        node.getNext().setPrev(node.getPrev());
+        node.getPrev().setPrev(node.getNext());
+        node.getNext().setNext(node.getPrev());
         size = Math.max(0, size - 1);
     }
 
@@ -59,7 +59,6 @@ public class DoubleLinkedList<T> {
 
         list.dummy.setNext(list.dummy);
         list.dummy.setPrev(list.dummy);
-        size += list.getSize();
     }
     public void insertListBefore(ListNode<T> node, DoubleLinkedList<T> list) {
         if(list.isEmpty())
@@ -71,6 +70,5 @@ public class DoubleLinkedList<T> {
 
         list.dummy.setNext(list.dummy);
         list.dummy.setPrev(list.dummy);
-        size += list.getSize();
     }
 }
