@@ -17,7 +17,7 @@ public class DoubleLinkedList<T> {
         return dummy.getNext();
     }
     public ListNode<T> getTail() {
-        return dummy.getNext();
+        return dummy.getPrev();
     }
 
     public ListNode<T> get(int index) {
