@@ -25,7 +25,7 @@ public class DoubleLinkedList<T> {
             throw new IndexOutOfBoundsException("index out of bounds");
         ListNode<T> cur = getHead();
         for(int i = 0; i < index; ++i)
-            cur = cur.getPrev();
+            cur = cur.getNext();
         return (Node<T>) cur;
     }
 
