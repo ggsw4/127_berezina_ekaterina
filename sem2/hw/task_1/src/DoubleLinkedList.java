@@ -56,7 +56,7 @@ public class DoubleLinkedList<T> {
         list.getTail().setPrev(node.getNext());
         node.getNext().setPrev(list.getTail());
         node.setNext(list.getHead());
-
+        size += list.getSize();
         list.dummy.setNext(list.dummy);
         list.dummy.setPrev(list.dummy);
     }
