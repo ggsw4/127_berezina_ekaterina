@@ -448,4 +448,11 @@ public class Task1_Tests extends Assert {
         var node = list.insertBefore(list.getHead(), 0);
         assertEquals(node, list.getHead());
     }
+    @Test
+    public void getTail_getTailOfTwoElements_TailIsCorrect() {
+        var list = new DoubleLinkedList<>();
+        list.insertBefore(list.getTail(), 0);
+        var node = list.insertAfter(list.getTail(), 0);
+        assertEquals(node, list.getTail());
+    }
 }
