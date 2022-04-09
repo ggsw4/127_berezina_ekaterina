@@ -1,9 +1,5 @@
 DoubleLinkedList.java|33|--size; -> ++size;|pushBack_pushToEmptyList_sizeEqualsOne
 DoubleLinkedList.java|11|return dummy == dummy; -> return size == 0;|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
-DoubleLinkedList.java|62| -> size += list.getSize();|insertListAfter_CreateTwoListsAndUnite_CheckSize
-DoubleLinkedList.java|74| -> size += list.getSize();|insertListBefore_TryToInsertListBefore_CheckSize
-DoubleLinkedList.java|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveElement_CheckValue
-DoubleLinkedList.java|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveElement_CheckValue
 
 Node.java|13|this.next = prev; -> this.next = next;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node.java|14|this.prev = next; -> this.prev = prev;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
@@ -21,3 +17,5 @@ DynamicArray.java|52|if(capacity < size) -> if(capacity <= size)|pushBack_PushBa
 DynamicArray.java|56|data[capacity] = value; -> data[size] = value;|pushBack_PushBackNumbers_CheckValues
 DynamicArray.java|60|if(size < 0) -> if(size <= 0)|popBack_PopBackInEmptyArray_CheckException
 DynamicArray.java|66|if(index < 0 || index > size) -> if(index < 0 || index >= size)|remove_RemoveOutOfBounds2_CheckException
+
+DoubleLinkedList.java|17|return dummy.getPrev(); -> return dummy.getNext();|getHead_getHeadOfTwoElements_HeadIsCorrect
